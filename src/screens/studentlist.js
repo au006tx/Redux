@@ -20,12 +20,20 @@ class StudentList extends React.Component{
         })
     }
 
+    onDelete(index) {
+        const data = this.props.students.filter((item, x) => x !== index)
+        this.props.getStudents(data);
+    }
+
     allStudents(){
         return this.props.students.map((item, index) => (
             <div key={index}>
                 <h1>
                     {item.firstName}
                 </h1>
+                <button onClick={() => this.onDelete(index)}>
+                    {'Delete'}
+                </button>
             </div>
         ))
     }
