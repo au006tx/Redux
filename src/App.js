@@ -8,7 +8,8 @@ import { createStore } from 'redux';
 
 
 // import StudentList from './screens/studentlist';
-import UserList from './screens/users';
+// import UserList from './screens/users';
+import CovidData from './screens/coviddata';
 
 class App extends React.Component{
   constructor(props){
@@ -22,7 +23,7 @@ class App extends React.Component{
     return(
       <Provider store={createStore(reducers)}>
         <div>
-          <UserList />
+          <CovidData />
         </div>
       </Provider>
     )

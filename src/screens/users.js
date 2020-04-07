@@ -8,43 +8,26 @@ class UserList extends React.Component{
         this.state = {
             users : []
         }
-        // this.allUsers = this.allUsers.bind(this);
+        this.allUsers = this.allUsers.bind(this);
     }
 
     componentDidMount(){
-        axios.get('https://corona.lmao.ninja/countries') 
+        axios.get('https://jsonplaceholder.typicode.com/albums') 
         .then(res => res.data )
         .then(data => {
             this.setState({
                 users : data
             })
-            console.log(data)
             
         })
     }
-
-//     componentDidMount() {
-//         fetch("https://corona-virus-world-and-india-data.p.rapidapi.com/api", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "corona-virus-world-and-india-data.p.rapidapi.com",
-// 		"x-rapidapi-key": "7c1656b1f9msh5aaf7881d194ff1p13086ajsn466cdf60f86e"
-// 	}
-// })
-// .then(response => {
-// 	console.log(response);
-// })
-// .catch(err => {
-// 	console.log(err);
-// });
-//     }
  
 
     allUsers(){
         return this.state.users.map((item, index) => (
             <div key={index}>
                 <h1>
-                    {item.country}
+                    {item.title}
                 </h1>
             </div>
         ))
