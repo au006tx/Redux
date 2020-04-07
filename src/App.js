@@ -39,7 +39,7 @@ class App extends React.Component{
                 alt="First slide"
               />
               <Carousel.Caption>
-                <h3>Live Updates</h3>
+                <h3 style={{color:'black'}}>Live Updates</h3>
                 <p>#stayhome #workfromhome</p>
               </Carousel.Caption>
           </Carousel.Item>
@@ -65,6 +65,14 @@ class App extends React.Component{
         </div>
         <div style={{flexDirection:'row', justifyContent:'center', display:'flex'}}>
           <CovidData />
+        </div>
+        <div class="d-flex flex-column" style={{backgroundColor:'#515151', marginTop:'10px'}}>
+          <footer class="footer">
+            <div style={{color:'white', justifyContent:'center', flexDirection:'row', display:'flex'}}>
+              <span>&copy; 2020 Design by Salman Ahmed</span>
+            </div>
+            
+          </footer>
         </div>
       </Provider>
     )

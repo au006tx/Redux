@@ -25,6 +25,7 @@ class CovidData extends React.Component{
         })
     }
 
+
     allCovidData(){
         return this.state.countries.map((item, index) => (
             <div key={index}> 
@@ -72,28 +73,25 @@ class CovidData extends React.Component{
                         <Card.Body>
                             <Card.Title style={{ flexWrap: "wrap", width: 200}} > <b> {item.country} </b> </Card.Title>
                                 <Card.Text>
-                                <h6 style={{color:'blue'}}>
                                     Cases :  {item.cases}
-                                </h6>
-                                <h6>
+                                </Card.Text>
+                                <Card.Text>
                                     Today Cases : {item.todayCases}
-                                </h6>
-                                <h6 style={{color:'red'}}>
+                                </Card.Text>
+                                <Card.Text style={{color:'red'}}>
                                     Deaths : {item.deaths}
-                                </h6>
-                                <h6>
+                                </Card.Text>
+                                <Card.Text>
                                     Today Deaths : {item.todayDeaths}   
-                                </h6>
-                                <h6 style={{color:'green'}}>
+                                </Card.Text>
+                                <Card.Text style={{color:'green'}}>
                                     Recovered : {item.recovered}    
-                                </h6>
-                                <h6>
+                                </Card.Text>
+                                <Card.Text>
                                     Active : {item.active} 
-                                </h6>
-                                <h6>
-                                    Critical : {item.critical}
-                                </h6>   
-                                    
+                                </Card.Text>
+                                <Card.Text>
+                                Critical : {item.critical}
                                 </Card.Text>
                         </Card.Body>
                     </Card>
@@ -103,10 +101,41 @@ class CovidData extends React.Component{
     }
 
     render(){
+        const india = this.state.countries;
         return(
-            <div style={{display: 'flex',justifyContent:'center',flexDirection:'row', flexWrap: "wrap"}}>   
-
-                {this.allCovidData()}
+            <div style={{display: 'flex',justifyContent:'center',flexDirection:'row', flexWrap: "wrap"}}> 
+                <div style={{background: 'linear-gradient(0deg, rgba(83,166,56,1) 13%, rgba(253,127,45,1) 74%)', display: 'flex', flexDirection:'row',borderRadius:'10px', padding:'30px', border:'1px solid black'}} >
+                    {india.filter(india => india.country === "India").map(filteredCountry => (
+                        <Card.Body>
+                                <Card.Title style={{ flexWrap: "wrap", width: 200}} > <b> {filteredCountry.country} </b> </Card.Title>
+                                    <Card.Text>
+                                       <b> Cases :  {filteredCountry.cases} </b> 
+                                    </Card.Text>
+                                    <Card.Text>
+                                       <b> Today Cases : {filteredCountry.todayCases} </b>
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Deaths : {filteredCountry.deaths}
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Today Deaths : {filteredCountry.todayDeaths}   
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Recovered : {filteredCountry.recovered}    
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Active : {filteredCountry.active} 
+                                    </Card.Text>
+                                    <Card.Text>
+                                    Critical : {filteredCountry.critical}
+                                    </Card.Text>
+                            </Card.Body>
+                    
+                    ))}
+                </div>
+                <div style={{display: 'flex',justifyContent:'center',flexDirection:'row', flexWrap: "wrap"}}>
+                    {this.allCovidData()}
+                </div>
             </div>
         )
     }
