@@ -25,6 +25,7 @@ class StudentList extends React.Component{
         this.props.getStudents(data);
     }
 
+
     allStudents(){
         return this.props.students.map((item, index) => (
             <div key={index}>
@@ -37,6 +38,8 @@ class StudentList extends React.Component{
             </div>
         ))
     }
+
+    
 
     render(){
         return(
