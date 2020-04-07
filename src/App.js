@@ -38,10 +38,6 @@ class App extends React.Component{
                 src="./assets/slide1.jpeg"
                 alt="First slide"
               />
-              <Carousel.Caption>
-                <h3 style={{color:'black'}}>Live Updates</h3>
-                <p>#stayhome #workfromhome</p>
-              </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
