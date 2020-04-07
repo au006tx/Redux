@@ -63,7 +63,7 @@ class App extends React.Component{
           <CovidData />
         </div>
         <div class="d-flex flex-column" style={{backgroundColor:'#515151', marginTop:'10px'}}>
-          <footer class="footer">
+          <footer className="footer">
             <div style={{color:'white', justifyContent:'center', flexDirection:'row', display:'flex'}}>
               <span>&copy; 2020 Design by Salman Ahmed</span>
             </div>
