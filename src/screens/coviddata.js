@@ -31,6 +31,9 @@ class CovidData extends React.Component{
     allCovidData(){
         return this.state.countries.map((item, index) => (
             <div key={index}>
+                 <div>
+                        <img src={Object.values(item.countryInfo)[5]} alt='flag'>
+                    </img>
                 <h1>
                     {item.country}
                 </h1>
@@ -60,9 +63,7 @@ class CovidData extends React.Component{
                         long: -97
                         flag: " */}
 
-                    <div>
-                        <img src={Object.values(item.countryInfo)[5]} alt='flag'>
-                        </img>
+                   
 
                    </div>
                         
