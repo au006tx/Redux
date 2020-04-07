@@ -59,9 +59,9 @@ class App extends React.Component{
           </Carousel.Item>
         </Carousel>
         <div style={{flexDirection:'row', justifyContent:'center', display:'flex', marginTop:'10px'}}>
-          <h1 style={{color:'#515151'}}>
+          <h5 style={{color:'#515151'}}>
             Stay home Stay Safe
-          </h1>
+          </h5>
         </div>
         <div style={{flexDirection:'row', justifyContent:'center', display:'flex'}}>
           <CovidData />
