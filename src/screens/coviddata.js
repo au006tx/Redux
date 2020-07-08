@@ -14,7 +14,7 @@ class CovidData extends React.Component{
     }
 
     componentDidMount(){
-        axios.get('https://corona.lmao.ninja/countries') 
+        axios.get('https://corona.lmao.ninja/v3/covid-19/countries') 
         .then(res => res.data )
         .then(data => {
             this.setState({
@@ -23,7 +23,7 @@ class CovidData extends React.Component{
             console.log(data)
             
         })
-        axios.get('https://corona.lmao.ninja/all') 
+        axios.get('https://corona.lmao.ninja/v3/covid-19/all') 
         .then(res => res.data )
         .then(data => {
             this.setState({
