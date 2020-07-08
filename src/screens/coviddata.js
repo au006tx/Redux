@@ -140,7 +140,7 @@ class CovidData extends React.Component{
                 <div style={{ display: 'flex', flexDirection:'row',borderRadius:'5px', padding:'30px', border:'1px solid black', margin:'2px'}} >
                     {india.filter(india => india.country === "India").map(filteredCountry => (
                         <Card.Body>
-                                <Card.Img variant="top" style={{width: 250, height: 200}} src={'https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/in.png'} alt='flag' />
+                                
                                 <Card.Title style={{ flexWrap: "wrap", width: 200, marginTop:'10px'}} > <b> {filteredCountry.country} </b> </Card.Title>
                                     <Card.Text style={{color:'blue'}}>
                                        <b> Cases :  {filteredCountry.cases} </b> 
